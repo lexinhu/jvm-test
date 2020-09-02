@@ -10,13 +10,13 @@ import java.util.UUID;
 public class TestJvmOutOfMemory {
     public static void main(String[] args) {
         ArrayList<Object> list = new ArrayList<>();
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 10000000; i++) {
             StringBuilder str = new StringBuilder();
             for (int j = 0; j < 1000; j++) {
                 str.append(UUID.randomUUID().toString());
             }
             list.add(str.toString());
-            System.out.println("OK");
         }
+        System.out.println("OK");
     }
 }
